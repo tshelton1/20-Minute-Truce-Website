@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { AppStoreButton } from "@/components/AppStoreButton";
+import { FightSceneBand } from "@/components/FightSceneBand";
 import { HeroRibbons } from "@/components/HeroRibbons";
 import { RibbonDivider } from "@/components/RibbonDivider";
 import { ShowcasePhoneDemo } from "@/components/ShowcasePhoneDemo";
@@ -78,6 +79,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FightSceneBand />
 
       <RibbonDivider />
 
@@ -174,29 +177,13 @@ export default function HomePage() {
             posterSrc="/videos/breathwork-poster.jpg"
             accent="gold"
           />
-          <figure className="flex flex-col items-center">
-            <div
-              className="relative aspect-[9/19.5] w-full max-w-[220px] overflow-hidden rounded-[2rem] border border-cream/10 bg-midnight-raised shadow-[0_24px_60px_-20px_rgba(0,0,0,0.65)]"
-              style={{
-                backgroundImage:
-                  "linear-gradient(165deg, #141A3C 0%, #0A0E27 50%, rgba(194,24,91,0.12) 100%)",
-              }}
-            >
-              <div className="absolute inset-x-0 top-0 flex justify-center pt-3">
-                <div className="h-5 w-20 rounded-full bg-midnight/80" />
-              </div>
-              <div className="flex h-full flex-col items-center justify-center px-6 text-center">
-                <div className="mb-4 h-px w-10 bg-magenta/50" />
-                <p className="font-display text-lg text-cream/90">Real-Talk</p>
-                <p className="mt-2 text-xs text-cream-subtle">
-                  Screenshot placeholder
-                </p>
-              </div>
-            </div>
-            <figcaption className="sr-only">
-              Placeholder frame for Real-Talk App Store screenshot
-            </figcaption>
-          </figure>
+          <ShowcasePhoneDemo
+            label="Real-Talk"
+            ariaLabel="Real-Talk Translator demo"
+            videoSrc="/videos/real-talk.mp4"
+            posterSrc="/videos/real-talk-poster.jpg"
+            accent="magenta"
+          />
         </div>
       </section>
 

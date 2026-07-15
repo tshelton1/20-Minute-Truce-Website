@@ -8,7 +8,7 @@ type ShowcasePhoneDemoProps = {
   ariaLabel: string;
   videoSrc: string;
   posterSrc: string;
-  accent: "teal" | "gold";
+  accent: "teal" | "gold" | "magenta";
 };
 
 export function ShowcasePhoneDemo({
@@ -31,7 +31,9 @@ export function ShowcasePhoneDemo({
   const frameTint =
     accent === "teal"
       ? "linear-gradient(165deg, #141A3C 0%, #0A0E27 50%, rgba(0,184,196,0.12) 100%)"
-      : "linear-gradient(165deg, #141A3C 0%, #0A0E27 50%, rgba(232,184,75,0.1) 100%)";
+      : accent === "gold"
+        ? "linear-gradient(165deg, #141A3C 0%, #0A0E27 50%, rgba(232,184,75,0.1) 100%)"
+        : "linear-gradient(165deg, #141A3C 0%, #0A0E27 50%, rgba(194,24,91,0.12) 100%)";
 
   const showStaticPoster = reduceMotion !== false;
 
