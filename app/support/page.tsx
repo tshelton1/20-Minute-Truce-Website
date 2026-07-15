@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AppStoreButton } from "@/components/AppStoreButton";
+import { FaqAccordion, type FaqItem } from "@/components/FaqAccordion";
 import { RibbonDivider } from "@/components/RibbonDivider";
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   },
 };
 
-const FAQ = [
+const FAQ: FaqItem[] = [
   {
     question: "How does 20 Minute Truce work?",
     answer: (
@@ -93,7 +94,7 @@ const FAQ = [
       </>
     ),
   },
-] as const;
+];
 
 export default function SupportPage() {
   return (
@@ -137,18 +138,7 @@ export default function SupportPage() {
         >
           Frequently asked questions
         </h2>
-        <dl className="mt-12 space-y-10">
-          {FAQ.map((item) => (
-            <div key={item.question}>
-              <dt className="font-display text-xl font-medium text-cream sm:text-2xl">
-                {item.question}
-              </dt>
-              <dd className="mt-3 text-base leading-[1.8] text-cream-muted sm:text-lg">
-                {item.answer}
-              </dd>
-            </div>
-          ))}
-        </dl>
+        <FaqAccordion items={FAQ} />
       </section>
 
       <RibbonDivider />

@@ -55,18 +55,29 @@ const STEPS = [
 const FEATURE_DEPTH = [
   {
     name: "Real-Talk Translator",
-    detail:
+    detail: [
       "Paste or write the message you almost sent. The translator preserves your meaning while removing contempt, sarcasm, and character attacks — the patterns Gottman research links most strongly to lasting relationship damage. You stay honest. You stop being cruel by accident.",
+    ],
   },
   {
     name: "Peace Mediator",
-    detail:
+    detail: [
       "A structured, neutral conversation guide for mid-conflict clarity. It helps each partner name the emotion under the argument, identify the unmet need, and propose a next step that doesn’t require anyone to lose. Think of it as a temporary third chair at the table — calm, curious, and without an agenda beyond repair.",
+    ],
   },
   {
     name: "Breathwork (4-7-8)",
-    detail:
+    detail: [
       "A short, guided physiological reset based on the 4-7-8 technique popularized in clinical and wellness practice. Extended exhalation slows heart rate and dampens sympathetic arousal. Use it alone during the truce window, or return to it anytime anger spikes mid-conversation.",
+    ],
+  },
+  {
+    name: "Cycle Breaker",
+    detail: [
+      "There’s a particular exhaustion that comes from recognizing the fight mid-sentence — the sinking certainty of “we’re here again,” the despair of always ending up in the same place with someone you love, the quiet fear that this loop isn’t a bad week, it’s who you are as a couple.",
+      "You’re not having ten different fights. You’re having the same fight ten times, wearing different clothes. Cycle Breaker looks across your recent Peace Mediator sessions and finds the repeating structure underneath: the recurring trigger, the predictable escalation path, the unmet need driving it, the exact moment it always turns. Then it names the loop out loud — and shows you how to interrupt it the next time the pattern starts to run.",
+      "That insight is meant as relief. The fight isn’t proof you’re incompatible. It’s a solvable pattern you simply couldn’t see from inside it. You can’t break a pattern you can’t see. This is how you stop running it.",
+    ],
   },
 ] as const;
 
@@ -128,9 +139,11 @@ export default function HowItWorksPage() {
               <h3 className="font-display text-2xl font-medium text-cream">
                 {feature.name}
               </h3>
-              <p className="mt-3 text-base leading-[1.8] text-cream-muted sm:text-lg">
-                {feature.detail}
-              </p>
+              <div className="mt-3 space-y-4 text-base leading-[1.8] text-cream-muted sm:text-lg">
+                {feature.detail.map((paragraph) => (
+                  <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+                ))}
+              </div>
             </li>
           ))}
         </ul>
