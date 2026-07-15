@@ -59,7 +59,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative isolate min-h-[min(92vh,52rem)] overflow-hidden">
         <HeroRibbons />
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-5 pb-24 pt-16 text-center sm:px-8 sm:pt-24 md:pb-32 md:pt-28">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-5 pb-12 pt-16 text-center sm:px-8 sm:pt-24 md:pb-16 md:pt-28">
           <Image
             src="/logo.png"
             alt="20 Minute Truce logo — two intertwined teal and magenta figures"

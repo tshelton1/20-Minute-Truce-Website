@@ -18,7 +18,7 @@ export function FightSceneBand() {
 
   return (
     <section
-      className="mx-auto max-w-3xl px-5 py-4 sm:px-8 md:py-6"
+      className="mx-auto max-w-3xl px-5 pt-2 pb-4 sm:px-8 md:pt-3 md:pb-6"
       aria-label="A couple in a difficult moment"
     >
       <div className="relative mx-auto h-[25rem] w-full overflow-hidden rounded-[1.5rem] border border-cream/10 bg-midnight-raised shadow-[0_24px_60px_-20px_rgba(0,0,0,0.65)] sm:h-[27rem] md:h-[30rem]">
