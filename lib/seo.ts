@@ -38,6 +38,50 @@ export const softwareApplicationJsonLd = {
   },
 };
 
+export const aboutPersonJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Dr. Tiffani",
+  honorificPrefix: "Dr.",
+  jobTitle: "Founder, Physician and Surgical Assistant",
+  description:
+    "Founder of 20 Minute Truce. Physician (D.O., SA-C) who created an AI couples mediator after struggling with shutting down during conflict at home.",
+  url: `${SITE_URL}/about`,
+  knowsAbout: [
+    "couples communication",
+    "conflict de-escalation",
+    "nervous system regulation",
+    "4-7-8 breathing",
+  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "20 Minute Truce",
+    url: SITE_URL,
+  },
+  founderOf: {
+    "@type": "Organization",
+    name: "20 Minute Truce",
+    url: SITE_URL,
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": `${SITE_URL}/about`,
+  },
+  subjectOf: {
+    "@type": "SoftwareApplication",
+    name: "20 Minute Truce",
+    url: SITE_URL,
+    applicationCategory: "LifestyleApplication",
+    operatingSystem: "iOS",
+    downloadUrl: APP_STORE_URL,
+    author: {
+      "@type": "Person",
+      name: "Dr. Tiffani",
+      url: `${SITE_URL}/about`,
+    },
+  },
+};
+
 export const scienceArticleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
