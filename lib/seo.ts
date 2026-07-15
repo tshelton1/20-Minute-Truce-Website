@@ -154,3 +154,39 @@ export function faqPageJsonLd(
     })),
   };
 }
+
+export function blogPostingJsonLd(post: {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: "Dr. Tiffani",
+      url: `${SITE_URL}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "20 Minute Truce",
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/blog/${post.slug}`,
+    },
+    image: `${SITE_URL}/og.png`,
+    url: `${SITE_URL}/blog/${post.slug}`,
+  };
+}

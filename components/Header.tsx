@@ -9,6 +9,7 @@ import { AppStoreButton } from "./AppStoreButton";
 const NAV = [
   { href: "/how-it-works", label: "How It Works" },
   { href: "/science", label: "The Science" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/support", label: "Support" },
 ] as const;
