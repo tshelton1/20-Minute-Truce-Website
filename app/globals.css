@@ -89,28 +89,28 @@ body {
   );
 }
 
-/* Ambient breath glow — symmetrical, slow expand/contract */
+/* Ambient breath glow — ~7s cycle, subtle scale + opacity, staggered rings */
 @keyframes breath-glow {
   0%,
   100% {
-    transform: translate(-50%, -50%) scale(0.92);
-    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.4;
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.08);
-    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 0.62;
   }
 }
 
 @keyframes breath-glow-delay {
   0%,
   100% {
-    transform: translate(-50%, -50%) scale(1.05);
-    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(0.96);
+    opacity: 0.36;
   }
   50% {
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1.06);
+    opacity: 0.58;
   }
 }
 
@@ -118,11 +118,23 @@ body {
   0%,
   100% {
     transform: translate(-50%, -50%) scale(0.96);
-    opacity: 0.65;
+    opacity: 0.45;
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.06);
+    opacity: 0.7;
+  }
+}
+
+@keyframes breath-ember {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.97);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.07);
+    opacity: 0.65;
   }
 }
 
@@ -137,16 +149,21 @@ body {
   }
 }
 
-.animate-breath-glow {
-  animation: breath-glow 10s ease-in-out infinite;
-}
-
-.animate-breath-glow-delay {
-  animation: breath-glow-delay 12s ease-in-out infinite;
+/* Innermost leads; outer rings follow — soft outward ripple */
+.animate-breath-ember {
+  animation: breath-ember 6.5s ease-in-out infinite;
 }
 
 .animate-breath-core {
-  animation: breath-core 8s ease-in-out infinite;
+  animation: breath-core 7s ease-in-out 0.35s infinite;
+}
+
+.animate-breath-glow-delay {
+  animation: breath-glow-delay 7.25s ease-in-out 0.7s infinite;
+}
+
+.animate-breath-glow {
+  animation: breath-glow 7.5s ease-in-out 1.05s infinite;
 }
 
 .animate-fade-up {
@@ -168,9 +185,10 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .animate-breath-glow,
   .animate-breath-glow-delay,
-  .animate-breath-core {
+  .animate-breath-core,
+  .animate-breath-ember {
     animation: none !important;
-    opacity: 0.7;
+    opacity: 0.52;
     transform: translate(-50%, -50%) scale(1);
   }
 
