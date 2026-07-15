@@ -3,17 +3,28 @@ import Image from "next/image";
 import { AppStoreButton } from "@/components/AppStoreButton";
 import { FightSceneBand } from "@/components/FightSceneBand";
 import { HeroRibbons } from "@/components/HeroRibbons";
+import { JsonLd } from "@/components/JsonLd";
 import { RibbonDivider } from "@/components/RibbonDivider";
 import { ShowcasePhoneDemo } from "@/components/ShowcasePhoneDemo";
+import { softwareApplicationJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "AI Mediator for Couples — Stop Fighting in 20 Minutes",
+  title: {
+    absolute: "Stop Fighting With Your Partner | 20 Minute Truce",
+  },
   description:
-    "How to stop fighting with your partner: 20 Minute Truce is an AI couples mediator that helps you de-escalate arguments, communicate better, and repair in twenty minutes.",
+    "How to stop fighting with your partner: an AI couples mediator that helps you de-escalate arguments and communicate better in 20 minutes.",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "You're in the fight again. There is a quieter way out.",
+    title: "Stop Fighting With Your Partner | 20 Minute Truce",
     description:
-      "An AI mediator for couples — pause the argument, calm your nervous system, and find your way back to each other.",
+      "You're in the fight again. An AI couples mediator helps you pause, breathe, and hear each other in twenty minutes.",
+    url: "/",
+  },
+  twitter: {
+    title: "Stop Fighting With Your Partner | 20 Minute Truce",
+    description:
+      "An AI couples mediator that helps you de-escalate arguments and communicate better in twenty minutes.",
   },
 };
 
@@ -43,6 +54,8 @@ const FEATURES = [
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={softwareApplicationJsonLd} />
+
       {/* Hero */}
       <section className="relative isolate min-h-[min(92vh,52rem)] overflow-hidden">
         <HeroRibbons />

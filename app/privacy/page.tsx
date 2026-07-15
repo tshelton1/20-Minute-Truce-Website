@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy policy for 20 Minute Truce. Learn what data we collect, how AI processing works, retention, security, and your rights — including how to delete your data.",
+    "Privacy policy for 20 Minute Truce: what we collect, AI processing, retention, security, your rights, and how to delete your data.",
+  alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy | 20 Minute Truce",
     description:
       "How 20 Minute Truce handles your data, AI-assisted guidance, and your privacy rights.",
+    url: "/privacy",
   },
 };
 

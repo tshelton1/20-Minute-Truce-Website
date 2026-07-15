@@ -1,22 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AppStoreButton } from "@/components/AppStoreButton";
+import { JsonLd } from "@/components/JsonLd";
 import { RibbonDivider } from "@/components/RibbonDivider";
+import { scienceArticleJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "The Science — Why 20 Minutes and 4-7-8 Breathing Work",
+  title: "4-7-8 Breathing for Anger & Fights",
   description:
-    "Why couples need time to de-escalate: fight-or-flight, the vagus nerve, 4-7-8 breathing for anger, and why a deliberate 20-minute separation helps repair conflict.",
+    "Why recurring fights stay stuck: fight-or-flight, the vagus nerve, 4-7-8 breathing for anger, and why 20 minutes helps couples de-escalate.",
+  alternates: { canonical: "/science" },
   openGraph: {
-    title: "The Science Behind a Twenty-Minute Truce",
+    title: "4-7-8 Breathing for Anger & Couples Conflict",
     description:
-      "Nervous system physiology, breathwork, and why stepping away helps couples stop fighting.",
+      "Nervous system science behind why a twenty-minute pause helps couples stop fighting.",
+    url: "/science",
+    type: "article",
   },
 };
 
 export default function SciencePage() {
   return (
     <article className="pb-20 md:pb-28">
+      <JsonLd data={scienceArticleJsonLd} />
       <header className="mx-auto max-w-3xl px-5 pt-16 text-center sm:px-8 sm:pt-24">
         <p className="text-xs tracking-[0.22em] uppercase text-gold/80">
           The science

@@ -6,6 +6,7 @@ const FOOTER_LINKS = [
   { href: "/science", label: "The Science" },
   { href: "/support", label: "Support" },
   { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Use" },
 ] as const;
 
 export function Footer() {
@@ -17,7 +18,7 @@ export function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 rounded-sm">
               <Image
                 src="/logo.png"
-                alt=""
+                alt="20 Minute Truce logo"
                 width={36}
                 height={36}
                 className="h-9 w-9 object-contain"

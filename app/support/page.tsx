@@ -2,16 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AppStoreButton } from "@/components/AppStoreButton";
 import { FaqAccordion, type FaqItem } from "@/components/FaqAccordion";
+import { JsonLd } from "@/components/JsonLd";
 import { RibbonDivider } from "@/components/RibbonDivider";
+import { faqPageJsonLd, supportFaqForSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Support — Help & FAQ",
+  title: "Support & FAQ",
   description:
-    "Get help with 20 Minute Truce. Contact support, learn how the AI couples communication app works, and find answers about privacy, canceling, and deleting your account.",
+    "Help for the 20 Minute Truce couples communication app — contact, privacy, canceling, deleting your account, and whether it’s therapy.",
+  alternates: { canonical: "/support" },
   openGraph: {
-    title: "Support | 20 Minute Truce",
+    title: "Support & FAQ | 20 Minute Truce",
     description:
       "Contact support@20minutetruce.com or browse frequently asked questions.",
+    url: "/support",
   },
 };
 
@@ -99,6 +103,7 @@ const FAQ: FaqItem[] = [
 export default function SupportPage() {
   return (
     <div className="pb-20 md:pb-28">
+      <JsonLd data={faqPageJsonLd(supportFaqForSchema)} />
       <header className="mx-auto max-w-3xl px-5 pt-16 text-center sm:px-8 sm:pt-24">
         <p className="text-xs tracking-[0.22em] uppercase text-gold/80">
           Support

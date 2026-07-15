@@ -3,13 +3,15 @@ import { AppStoreButton } from "@/components/AppStoreButton";
 import { RibbonDivider } from "@/components/RibbonDivider";
 
 export const metadata: Metadata = {
-  title: "How It Works — The 20-Minute Method for Couples",
+  title: "How to De-escalate an Argument",
   description:
-    "Learn how to de-escalate an argument in twenty minutes: pause, reset with 4-7-8 breathwork, use an AI couples mediator, and repair with intention.",
+    "How to de-escalate an argument in 20 minutes: pause, 4-7-8 breathwork, AI couples mediator, then repair — the 20 Minute Truce method.",
+  alternates: { canonical: "/how-it-works" },
   openGraph: {
-    title: "How 20 Minute Truce Works",
+    title: "How to De-escalate an Argument | 20 Minute Truce",
     description:
       "A clear sequence for stopping a fight midstream — pause, breathe, mediate, repair.",
+    url: "/how-it-works",
   },
 };
 

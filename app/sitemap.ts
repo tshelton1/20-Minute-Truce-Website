@@ -1,39 +1,45 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://20minutetruce.com";
   const lastModified = new Date();
 
   return [
     {
-      url: base,
+      url: SITE_URL,
       lastModified,
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${base}/how-it-works`,
+      url: `${SITE_URL}/how-it-works`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${base}/science`,
+      url: `${SITE_URL}/science`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${base}/support`,
+      url: `${SITE_URL}/support`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${base}/privacy`,
+      url: `${SITE_URL}/privacy`,
       lastModified,
       changeFrequency: "yearly",
-      priority: 0.5,
+      priority: 0.4,
+    },
+    {
+      url: `${SITE_URL}/terms`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.4,
     },
   ];
 }
