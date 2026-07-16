@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AppStoreButton } from "@/components/AppStoreButton";
+import { ContactForm } from "@/components/ContactForm";
 import { FaqAccordion, type FaqItem } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { RibbonDivider } from "@/components/RibbonDivider";
@@ -9,12 +10,12 @@ import { faqPageJsonLd, supportFaqForSchema } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Support & FAQ",
   description:
-    "Help for the 20 Minute Truce couples communication app — contact, privacy, canceling, deleting your account, and whether it’s therapy.",
+    "Help for the 20 Minute Truce couples communication app — contact us, browse FAQs on privacy, canceling, deleting your account, and whether it’s therapy.",
   alternates: { canonical: "/support" },
   openGraph: {
     title: "Support & FAQ | 20 Minute Truce",
     description:
-      "Contact support@20minutetruce.com or browse frequently asked questions.",
+      "Contact support@20minutetruce.com, send a message, or browse frequently asked questions.",
     url: "/support",
   },
 };
@@ -136,7 +137,30 @@ export default function SupportPage() {
 
       <RibbonDivider />
 
-      <section className="mx-auto max-w-3xl px-5 sm:px-8" aria-labelledby="faq-heading">
+      <section
+        className="mx-auto max-w-3xl px-5 sm:px-8"
+        aria-labelledby="contact-form-heading"
+      >
+        <h2
+          id="contact-form-heading"
+          className="text-center font-display text-3xl font-medium tracking-tight text-cream sm:text-4xl"
+        >
+          Send a message
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-center text-base leading-relaxed text-cream-muted sm:text-lg">
+          Prefer a form? Share a few details and we’ll get back to you.
+        </p>
+        <div className="mt-10 rounded-sm border border-cream/[0.08] bg-midnight-raised/60 px-8 py-10">
+          <ContactForm />
+        </div>
+      </section>
+
+      <RibbonDivider />
+
+      <section
+        className="mx-auto max-w-3xl px-5 sm:px-8"
+        aria-labelledby="faq-heading"
+      >
         <h2
           id="faq-heading"
           className="text-center font-display text-3xl font-medium tracking-tight text-cream sm:text-4xl"
