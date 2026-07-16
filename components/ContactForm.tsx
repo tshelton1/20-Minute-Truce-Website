@@ -110,9 +110,37 @@ export function ContactForm() {
         <div
           role="alert"
           aria-live="polite"
-          className="rounded-sm border border-magenta/20 bg-magenta/10 px-4 py-3 text-sm leading-relaxed text-cream-muted"
+          className="flex items-start gap-3 rounded-sm border border-magenta/55 bg-magenta/10 px-5 py-4 shadow-[0_0_24px_rgba(194,24,91,0.28)]"
         >
-          {error}
+          <span
+            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center text-magenta"
+            aria-hidden="true"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="8.25"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              />
+              <path
+                d="M10 6.25v4.5M10 13.5h.01"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+          <p className="font-display text-[1.25rem] leading-snug font-medium tracking-tight text-magenta sm:text-[1.375rem]">
+            {error}
+          </p>
         </div>
       ) : null}
 
@@ -120,9 +148,38 @@ export function ContactForm() {
         <div
           role="status"
           aria-live="polite"
-          className="rounded-sm border border-teal/20 bg-midnight-raised/60 px-4 py-3 text-sm leading-relaxed text-cream"
+          className="flex items-start gap-3 rounded-sm border border-teal/55 bg-teal/10 px-5 py-4 shadow-[0_0_24px_rgba(0,184,196,0.28)]"
         >
-          Thanks — we&apos;ll be in touch soon.
+          <span
+            className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center text-teal"
+            aria-hidden="true"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="10"
+                cy="10"
+                r="8.25"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              />
+              <path
+                d="M6.25 10.25l2.5 2.5 5-5.25"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </span>
+          <p className="font-display text-[1.25rem] leading-snug font-medium tracking-tight text-gradient-partners sm:text-[1.375rem]">
+            Thanks — we&apos;ll be in touch soon.
+          </p>
         </div>
       ) : null}
 
