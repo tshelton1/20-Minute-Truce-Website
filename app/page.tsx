@@ -57,9 +57,9 @@ export default function HomePage() {
       <JsonLd data={softwareApplicationJsonLd} />
 
       {/* Hero */}
-      <section className="relative isolate min-h-[min(92vh,52rem)] overflow-hidden">
+      <section className="relative isolate overflow-hidden">
         <HeroRibbons />
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-5 pb-12 pt-16 text-center sm:px-8 sm:pt-24 md:pb-16 md:pt-28">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center px-5 pb-2 pt-4 text-center sm:px-8 sm:pb-3 sm:pt-5 md:pb-3 md:pt-6">
           <Image
             src="/logo.png"
             alt="20 Minute Truce logo — two intertwined teal and magenta figures"
@@ -69,25 +69,25 @@ export default function HomePage() {
             className="animate-fade-up h-28 w-28 object-contain sm:h-36 sm:w-36 md:h-40 md:w-40"
           />
 
-          <p className="animate-fade-up-delay-1 mt-8 font-display text-2xl font-medium tracking-tight text-cream sm:text-3xl md:text-4xl">
+          <p className="animate-fade-up-delay-1 mt-2 font-display text-2xl font-medium tracking-tight text-cream sm:mt-3 sm:text-3xl md:text-4xl">
             20 Minute Truce
           </p>
-          <p className="animate-fade-up-delay-1 mt-2 text-sm tracking-[0.2em] uppercase text-cream-subtle sm:text-[0.8rem]">
+          <p className="animate-fade-up-delay-1 mt-1 text-sm tracking-[0.2em] uppercase text-cream-subtle sm:text-[0.8rem]">
             AI Mediator for Couples
           </p>
 
-          <h1 className="animate-fade-up-delay-2 mt-10 max-w-3xl font-display text-[2.35rem] leading-[1.12] font-medium tracking-tight text-cream sm:text-5xl md:text-6xl lg:text-[4rem]">
+          <h1 className="animate-fade-up-delay-2 mt-3 max-w-3xl font-display text-[2.35rem] leading-[1.12] font-medium tracking-tight text-cream sm:mt-4 sm:text-5xl md:text-6xl lg:text-[4rem]">
             You’re in the fight{" "}
             <span className="text-gradient-partners">again</span>.
           </h1>
 
-          <p className="animate-fade-up-delay-2 mt-6 max-w-xl text-base leading-relaxed text-cream-muted sm:text-lg">
+          <p className="animate-fade-up-delay-2 mt-2 max-w-xl text-base leading-relaxed text-cream-muted sm:mt-3 sm:text-lg">
             Same words. Same wound. Same dread that this is becoming who you are
             together. There is a quieter way — twenty minutes from here to
             hearing each other again.
           </p>
 
-          <div className="animate-fade-up-delay-3 mt-10">
+          <div className="animate-fade-up-delay-3 mt-3 sm:mt-4">
             <AppStoreButton size="large" />
           </div>
         </div>
