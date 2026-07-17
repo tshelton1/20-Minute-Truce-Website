@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Fraunces, Inter } from "next/font/google";
-import Script from "next/script";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -82,12 +81,10 @@ export default function RootLayout({
       className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
     >
       <head>
-        <Script
-          id="google-adsense"
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7604548979736038"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
       </head>
       <body className="flex min-h-full flex-col font-sans">
