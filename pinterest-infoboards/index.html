@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>20 Minute Truce — Pinterest Infoboards</title>
+    <title>20 Minute Truce — Pinterest Infoboards Preview</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,26 +13,8 @@
     <link rel="stylesheet" href="shared.css" />
     <style>
       .gallery {
-        max-width: 1080px;
+        max-width: 1280px;
         margin: 0 auto;
-      }
-      .cards {
-        display: grid;
-        gap: 20px;
-      }
-      .card {
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        padding: 20px 24px;
-        background: #151515;
-      }
-      .card h2 {
-        font-size: 20px;
-        margin-bottom: 8px;
-      }
-      .card code {
-        font-size: 13px;
-        opacity: 0.85;
       }
       .section {
         margin-top: 36px;
@@ -42,74 +24,185 @@
         text-transform: uppercase;
         opacity: 0.55;
       }
+      .thumb-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 28px;
+        margin-top: 20px;
+      }
+      .thumb-card {
+        background: #151515;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .thumb-card h2 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.35;
+      }
+      .thumb-frame {
+        width: 100%;
+        aspect-ratio: 2 / 3;
+        overflow: hidden;
+        border-radius: 8px;
+        background: #0a0e27;
+        position: relative;
+      }
+      .thumb-frame iframe {
+        width: 1000px;
+        height: 1500px;
+        border: 0;
+        transform-origin: top left;
+        transform: scale(0.22);
+        pointer-events: none;
+      }
+      .thumb-card a {
+        display: inline-block;
+        margin-top: 10px;
+        color: var(--teal);
+        font-size: 13px;
+      }
+      .cards {
+        display: grid;
+        gap: 16px;
+      }
+      .card {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 16px 20px;
+        background: #151515;
+      }
+      .card h2 {
+        font-size: 18px;
+        margin-bottom: 6px;
+      }
+      .card code {
+        font-size: 12px;
+        opacity: 0.85;
+      }
     </style>
   </head>
   <body class="gallery">
     <div class="gallery">
       <h1>Pinterest Infoboards</h1>
       <p>
-        Open each board at 1000×1500, then export a PNG. Design matches the
-        existing 20 Minute Truce pin system.
+        Existing midnight / Fraunces / App Store pill template. New series
+        preview below at thumbnail scale. Full size: open each board link.
       </p>
 
-      <p class="section">Feature series (Neutral Mediator + Cycle Breaker)</p>
-      <div class="cards">
-        <div class="card">
-          <h2>01 — Emotional Flooding</h2>
-          <p>Keyword: overwhelmed during fight · Solution: Peace Button</p>
-          <p>
-            <a href="01-emotional-flooding.html">Open board</a> ·
-            <code>8-emotional-flooding.png</code>
-          </p>
+      <p class="section">New series (8 boards) — thumbnail preview</p>
+      <div class="thumb-grid">
+        <div class="thumb-card">
+          <h2>13 — Silent Treatment / Stonewalling</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Silent Treatment pin"
+              src="13-silent-treatment-stonewalling.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="13-silent-treatment-stonewalling.html">Open full board</a>
         </div>
-        <div class="card">
-          <h2>02 — Silent Treatment</h2>
-          <p>Keyword: silent treatment in relationship · Solution: Cycle Breaker</p>
-          <p>
-            <a href="02-silent-treatment.html">Open board</a> ·
-            <code>9-silent-treatment.png</code>
-          </p>
+        <div class="thumb-card">
+          <h2>14 — Recurring Arguments</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Recurring Arguments pin"
+              src="14-recurring-arguments.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="14-recurring-arguments.html">Open full board</a>
         </div>
-        <div class="card">
-          <h2>03 — Fighting Fair</h2>
-          <p>Keyword: how to fight fair · Solution: Neutral Mediator</p>
-          <p>
-            <a href="03-fighting-fair.html">Open board</a> ·
-            <code>10-fighting-fair.png</code>
-          </p>
+        <div class="thumb-card">
+          <h2>15 — Feeling Unheard</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Feeling Unheard pin"
+              src="15-feeling-unheard.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="15-feeling-unheard.html">Open full board</a>
         </div>
-        <div class="card">
-          <h2>04 — Relationship Anxiety</h2>
-          <p>Keyword: anxiety after an argument · Solution: Cycle Breaker</p>
-          <p>
-            <a href="04-relationship-anxiety.html">Open board</a> ·
-            <code>11-relationship-anxiety.png</code>
-          </p>
+        <div class="thumb-card">
+          <h2>16 — Money Arguments</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Money Arguments pin"
+              src="16-money-arguments.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="16-money-arguments.html">Open full board</a>
         </div>
-        <div class="card">
-          <h2>05 — Destructive Habits</h2>
-          <p>Keyword: why relationships fail · Solution: Cycle Breaker</p>
-          <p>
-            <a href="05-destructive-habits.html">Open board</a> ·
-            <code>12-destructive-habits.png</code>
-          </p>
+        <div class="thumb-card">
+          <h2>17 — Emotional Disconnect</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Emotional Disconnect pin"
+              src="17-emotional-disconnect.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="17-emotional-disconnect.html">Open full board</a>
+        </div>
+        <div class="thumb-card">
+          <h2>18 — Rebuild Trust After a Lie</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Rebuild Trust pin"
+              src="18-rebuild-trust-after-lie.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="18-rebuild-trust-after-lie.html">Open full board</a>
+        </div>
+        <div class="thumb-card">
+          <h2>19 — Fight Over Little Things</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Little Things pin"
+              src="19-fight-over-little-things.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="19-fight-over-little-things.html">Open full board</a>
+        </div>
+        <div class="thumb-card">
+          <h2>20 — Feeling Unappreciated</h2>
+          <div class="thumb-frame">
+            <iframe
+              title="Unappreciated pin"
+              src="20-feeling-unappreciated.html"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <a href="20-feeling-unappreciated.html">Open full board</a>
         </div>
       </div>
 
-      <p class="section">Earlier Suby series</p>
+      <p class="section">Earlier feature series</p>
       <div class="cards">
         <div class="card">
-          <h2>Layout A — The Agitator</h2>
+          <h2>01–05 Feature boards</h2>
           <p>
-            <a href="a-agitator.html">Open a-agitator.html</a> ·
-            <code>6-agitator-hidden-trigger.png</code>
+            <a href="01-emotional-flooding.html">01</a> ·
+            <a href="02-silent-treatment.html">02</a> ·
+            <a href="03-fighting-fair.html">03</a> ·
+            <a href="04-relationship-anxiety.html">04</a> ·
+            <a href="05-destructive-habits.html">05</a>
           </p>
         </div>
         <div class="card">
-          <h2>Layout B — The Unfair Advantage</h2>
+          <h2>Export PNGs</h2>
           <p>
-            <a href="b-unfair-advantage.html">Open b-unfair-advantage.html</a> ·
-            <code>7-unfair-advantage-secret-system.png</code>
+            <code>node pinterest-infoboards/export-pngs.mjs --new8</code>
+          </p>
+          <p style="margin-top: 8px; opacity: 0.7">
+            Outputs to <code>Pinterest posts/13-*.png</code> through
+            <code>20-*.png</code>
           </p>
         </div>
       </div>
