@@ -190,3 +190,64 @@ export function blogPostingJsonLd(post: {
     url: `${SITE_URL}/blog/${post.slug}`,
   };
 }
+
+/** Homepage self-hosted clips (only videos on the site). Durations from MP4 mvhd. */
+export const homepageVideos = [
+  {
+    name: "20 Minute Truce — Conflict scene",
+    description:
+      "A short cinematic clip of a couple in a heated conflict, introducing the emotional stakes 20 Minute Truce is built to de-escalate.",
+    contentPath: "/videos/fight-scene.mp4",
+    thumbnailPath: "/videos/fight-scene-poster.jpg",
+    uploadDate: "2026-07-15T15:30:10-04:00",
+    durationSeconds: 6,
+  },
+  {
+    name: "20 Minute Truce — Peace Mediator demo",
+    description:
+      "In-app demo of the Peace Mediator guiding partners through a calm, structured de-escalation when neither person can hold the middle alone.",
+    contentPath: "/videos/peace-mediator.mp4",
+    thumbnailPath: "/videos/peace-mediator-poster.jpg",
+    uploadDate: "2026-07-15T12:39:55-04:00",
+    durationSeconds: 9,
+  },
+  {
+    name: "20 Minute Truce — Breathwork demo",
+    description:
+      "In-app demo of guided 4-7-8 breathwork that helps settle fight-or-flight arousal before partners re-enter a hard conversation.",
+    contentPath: "/videos/breathwork.mp4",
+    thumbnailPath: "/videos/breathwork-poster.jpg",
+    uploadDate: "2026-07-15T12:39:55-04:00",
+    durationSeconds: 22,
+  },
+  {
+    name: "20 Minute Truce — Real-Talk Translator demo",
+    description:
+      "In-app demo of the Real-Talk Translator helping partners say what they mean without the words landing as an attack.",
+    contentPath: "/videos/real-talk.mp4",
+    thumbnailPath: "/videos/real-talk-poster.jpg",
+    uploadDate: "2026-07-15T15:30:10-04:00",
+    durationSeconds: 16,
+  },
+] as const;
+
+function iso8601Duration(totalSeconds: number): string {
+  const seconds = Math.round(totalSeconds);
+  const minutes = Math.floor(seconds / 60);
+  const rem = seconds % 60;
+  if (minutes === 0) return `PT${rem}S`;
+  return `PT${minutes}M${rem}S`;
+}
+
+export const homepageVideosJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": homepageVideos.map((video) => ({
+    "@type": "VideoObject",
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: `${SITE_URL}${video.thumbnailPath}`,
+    contentUrl: `${SITE_URL}${video.contentPath}`,
+    uploadDate: video.uploadDate,
+    duration: iso8601Duration(video.durationSeconds),
+  })),
+};

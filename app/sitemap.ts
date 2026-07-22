@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
-import { SITE_URL } from "@/lib/seo";
+import { homepageVideos, SITE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
@@ -11,6 +11,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
+      videos: homepageVideos.map((video) => ({
+        title: video.name,
+        thumbnail_loc: `${SITE_URL}${video.thumbnailPath}`,
+        description: video.description,
+        content_loc: `${SITE_URL}${video.contentPath}`,
+        duration: video.durationSeconds,
+        publication_date: video.uploadDate,
+      })),
     },
     {
       url: `${SITE_URL}/how-it-works`,

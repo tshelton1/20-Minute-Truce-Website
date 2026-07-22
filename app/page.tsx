@@ -6,7 +6,7 @@ import { HeroRibbons } from "@/components/HeroRibbons";
 import { JsonLd } from "@/components/JsonLd";
 import { RibbonDivider } from "@/components/RibbonDivider";
 import { ShowcasePhoneDemo } from "@/components/ShowcasePhoneDemo";
-import { softwareApplicationJsonLd } from "@/lib/seo";
+import { homepageVideosJsonLd, softwareApplicationJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
@@ -55,6 +55,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={softwareApplicationJsonLd} />
+      <JsonLd data={homepageVideosJsonLd} />
 
       {/* Hero */}
       <section className="relative isolate overflow-hidden">
